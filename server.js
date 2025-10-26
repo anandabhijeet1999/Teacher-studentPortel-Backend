@@ -31,7 +31,7 @@ app.use(limiter);
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
     ? ['teacher-student-pro.netlify.app'] 
-    : ['http://localhost:3000'],
+    : ['teacher-student-pro.netlify.app'],
   credentials: true
 }));
 
