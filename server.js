@@ -30,9 +30,11 @@ app.use(limiter);
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['teacher-student-pro.netlify.app'] 
-    : ['teacher-student-pro.netlify.app'],
-  credentials: true
+    ? ['https://teacher-student-pro.netlify.app'] 
+    : ['http://localhost:3000', 'https://teacher-student-pro.netlify.app'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Body parser middleware
