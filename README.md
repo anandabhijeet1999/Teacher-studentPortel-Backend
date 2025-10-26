@@ -47,19 +47,19 @@ A Node.js backend API for the Teacher-Student Portal that handles authentication
    MONGODB_URI=mongodb+srv://your-username:your-password@cluster0.xxxxx.mongodb.net/teacher-student-portal
    JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
    PORT=5000
-   NODE_ENV=development
+   NODE_ENV=teacher-student-pro.netlify.app
    ```
 
 4. **Start the server**
    ```bash
-   # Development mode
+   # teacher-student-pro.netlify.app mode
    npm run dev
    
    # Production mode
    npm start
    ```
 
-The server will start on `http://localhost:5000`
+
 
 ## API Endpoints
 
@@ -150,12 +150,12 @@ You can test the API using tools like Postman or curl:
 
 ```bash
 # Login
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST https://teacher-studentportel-backend-website.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"teacher@example.com","password":"password123"}'
 
 # Get assignments (with JWT token)
-curl -X GET http://localhost:5000/api/assignments \
+curl -X GET https://teacher-studentportel-backend-website.onrender.com/api/assignments \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
